@@ -96,8 +96,8 @@ std::string HashTable::searchTable(int key)
 		}
 		for (auto bItr = table[i].begin(); bItr != table[i].end(); bItr++) {
 			if (bItr->first == key) {
-				std::cout << "Key found!" << std::endl;
-				return str = "Key found!";
+				std::cout << bItr->first << " found! Value: " << bItr->second << std::endl;
+				return str = bItr->second;
 			}
 			else {
 				continue;
@@ -105,7 +105,7 @@ std::string HashTable::searchTable(int key)
 		}
 	}
 	std::cout << "No key found!" << std::endl;
-	return str = "No key found!";
+	return str = "N/A";
 }
 
 int main()
